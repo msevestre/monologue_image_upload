@@ -8,7 +8,8 @@ gem "monologue", :git => "git@github.com:jipiboily/monologue.git"
 gemspec
 
 # jquery-rails is used by the dummy application
-gem "jquery-rails"
+#gem "jquery-rails"
+#gem "paperclip"
 
 # Declare any dependencies that are still in development here instead of in
 # your gemspec. These might include edge Rails or gems from your path or

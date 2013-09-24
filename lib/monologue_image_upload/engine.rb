@@ -1,3 +1,6 @@
+require 'paperclip'
+require 'jquery-rails'
+
 module MonologueImageUpload
   class Engine < ::Rails::Engine
     isolate_namespace MonologueImageUpload
