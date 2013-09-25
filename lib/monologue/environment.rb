@@ -3,4 +3,8 @@ module Monologue
     include EnvironmentExtensions
 
   end
+
+  def self.config(&block)
+    yield(Rails.application.config.monologue)
+  end
 end

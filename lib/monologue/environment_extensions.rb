@@ -1,7 +1,5 @@
 module Monologue
   module EnvironmentExtensions
-    extend ActiveSupport::Concern
-
     def add_class(name)
       self.instance_variable_set "@#{name}", Set.new
 
