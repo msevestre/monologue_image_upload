@@ -1,9 +1,7 @@
-require 'paperclip'
-require 'jquery-rails'
-
 module MonologueImageUpload
   class Engine < ::Rails::Engine
-    isolate_namespace MonologueImageUpload
+    isolate_namespace Monologue
+    engine_name 'monologue_image_upload'
 
     config.generators do |g|
       g.test_framework :rspec, :view_specs => false , :fixture => false
@@ -11,10 +9,21 @@ module MonologueImageUpload
       g.integration_tool :rspec
     end
 
+    #this should be moved in monologue itself
+    initializer "monologue.environment", :before => :load_config_initializers do |app|
+      app.config.monologue = Monologue::Environment.new
+    end
+
+    initializer "monologue.image_upload.preferences", :after => "monologue.environment",:before => :load_config_initializers  do |app|
+      app.config.monologue.add_class('image_upload')
+      app.config.monologue.image_upload = Monologue::ImageUploadConfiguration.new
+    end
+
     def self.activate
       Dir.glob(File.join(File.dirname(__FILE__), "../../app/overrides/*.rb")) do |c|
         Rails.env.production? ? require(c) : load(c)
       end
+
 
       Dir.glob(File.join(File.dirname(__FILE__), "../../app/**/*_decorator.rb")) do |c|
         Rails.env.production? ? require(c) : load(c)
