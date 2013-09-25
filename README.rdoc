@@ -22,14 +22,7 @@ gem "monologue_image_upload", :git => "git@github.com:msevestre/monologue_image_
 ```
 And run `bundle install` to fetch the gem and update your 'Gemfile.lock'.
 
-### 2. Route to CKEditor
-
-Add this to your route file (`config/route.rb`)
-```ruby
-mount Ckeditor::Engine => '/ckeditor'
-```
-
-### 3. Run the required migrations
+### 2. Run the required migrations
 Run these commands:
 
 1. $`bundle exec rake monologue_image_upload:install:migrations`
