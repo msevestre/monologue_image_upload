@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = "Extension for the gem Monologue that adds the upload image capability"
   s.description = "Extension for the gem Monologue that adds the upload image capability"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails", "~> 4.0.0"
   #s.add_dependency "monologue", "~> 4.0"
