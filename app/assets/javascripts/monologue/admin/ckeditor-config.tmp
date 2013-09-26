@@ -1,0 +1,30 @@
+$(function() {
+
+//    Full configuation can be found under  http://docs.cksource.com/CKEditor_3.x/Developers_Guide/Toolbar
+    CKEDITOR.config.toolbar = 'Basic';
+    CKEDITOR.config.toolbar_Basic =
+    [
+    	{ name: 'document', items : [ 'Source','-','Save','NewPage','DocProps','Preview','Print','-','Templates' ] },
+    	{ name: 'insert', items : [ 'Image','Table','HorizontalRule','Smiley','SpecialChar','PageBreak','Iframe' ] },
+    ];
+
+    CKEDITOR.config.filebrowserBrowseUrl = "/aa/attachment_files";
+
+      // The location of an external file browser, that should be launched when "Browse Server" button is pressed in the Flash dialog.
+    CKEDITOR.config.filebrowserFlashBrowseUrl = "/aa/attachment_files";
+
+      // The location of a script that handles file uploads in the Flash dialog.
+    CKEDITOR.config.filebrowserFlashUploadUrl = "/aa/attachment_files";
+
+      // The location of an external file browser, that should be launched when "Browse Server" button is pressed in the Link tab of Image dialog.
+    CKEDITOR.config.filebrowserImageBrowseLinkUrl = "/aa/pictures";
+
+      // The location of an external file browser, that should be launched when "Browse Server" button is pressed in the Image dialog.
+    CKEDITOR.config.filebrowserImageBrowseUrl = "/aa/pictures";
+
+      // The location of a script that handles file uploads in the Image dialog.
+    CKEDITOR.config.filebrowserImageUploadUrl = "/aa/pictures";
+
+      // The location of a script that handles file uploads.
+    CKEDITOR.config.filebrowserUploadUrl = "/aa/attachment_files";
+});

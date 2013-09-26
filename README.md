@@ -3,8 +3,6 @@
 **THIS README IS FOR THE MASTER BRANCH AND IS ONLY COMPATIBLE WITH THE MASTER BRANCH OF MONOLOGUE**
 -
 
-## Version
-
 ## Questions? Problems? Documentation?
 
 - [Mailing list for questions](http://groups.google.com/forum/#!forum/monologue-rb)
