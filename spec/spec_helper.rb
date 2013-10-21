@@ -10,8 +10,6 @@ require 'capybara/rails'
 require 'capybara-webkit'
 
 require "factory_girl_rails"
-require 'database_cleaner'
-
 require 'monologue_image_upload'
 
 

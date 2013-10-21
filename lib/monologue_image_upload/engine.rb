@@ -9,12 +9,7 @@ module MonologueImageUpload
       g.integration_tool :rspec
     end
 
-    #this should be moved in monologue itself
-    initializer "monologue.environment", :before => :load_config_initializers do |app|
-      app.config.monologue = Monologue::Environment.new
-    end
-
-    initializer "monologue.image_upload.preferences", :after => "monologue.environment",:before => :load_config_initializers  do |app|
+    initializer "monologue.image_upload.preferences", :after => "monologue.configuration",:before => :load_config_initializers  do |app|
       app.config.monologue.add_class('image_upload')
       app.config.monologue.image_upload = Monologue::ImageUploadConfiguration.new
     end
