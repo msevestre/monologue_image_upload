@@ -16,7 +16,7 @@
 ## Installation
 ### 1. Add the gem to your `Gemfile`
 ```ruby
-gem "monologue_image_upload", :git => "git@github.com:msevestre/monologue_image_upload.git"
+gem 'monologue_image_upload', :git => "https://github.com/msevestre/monologue_image_upload.git"
 ```
 And run `bundle install` to fetch the gem and update your 'Gemfile.lock'.
 
@@ -30,9 +30,9 @@ Run these commands:
 ### 5. Configure Monologue.
 This is all done in an initializer file, say `config/initializers/monologue.rb`.
 ```ruby
-Monologue.config do |monologue|
-  monologue.image_upload.max_picture_size = 2.megabytes
-  monologue.image_upload.upload_path = "monologue"
+Monologue.config do |config|
+  config.image_upload.max_picture_size = 2.megabytes
+  config.image_upload.upload_path = "monologue"
 end
 ```
 ## Requirements
